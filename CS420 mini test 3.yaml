@@ -1,0 +1,70 @@
+ex1:
+  start_state: "q0"
+  accepted_states: [qf]
+  edges:
+    - {src: q0, dst: qa, push: $}
+    - {src: qa, dst: qa, char: a, push: a}
+    - {src: qb, dst: qb, char: b, push: b}
+    - {src: qa, dst: qa1, push: a} 
+    - {src: qa1, dst: qb, pop: a}
+    - {src: qb, dst: qb1, push: b}
+    - {src: qb1, dst: qc, pop: b}
+    - {src: qc, dst: qc, pop: a, char: c}
+    - {src: qc, dst: qc, pop: b, char: c}
+    - {src: qc, dst: qf, pop: $}
+
+ex2:
+    start_state: "q0"
+    accepted_states: [qf]
+    edges:
+      - {src: q0, dst: q1, push: $}
+      - {src: q1, dst: q2, push: S}
+      - {src: q2, dst: q28, pop: X}
+      - {src: q28, dst: q2, push: a}
+      - {src: q2, dst: q29, pop: X}
+      - {src: q29, dst: q2, push: b}
+      - {src: q2, dst: q2, pop: T}
+      - {src: q2, dst: q2, pop: a, char: a}
+      - {src: q2, dst: q2, pop: b, char: b}
+      - {src: q2, dst: q26, pop: T}
+      - {src: q26, dst: q21, push: S}
+      - {src: q21, dst: q22, push: T}
+      - {src: q22, dst: q2, push: X}
+      - {src: q2, dst: q27, pop: S}
+      - {src: q27, dst: q23, push: b}
+      - {src: q23, dst: q24, push: X}
+      - {src: q24, dst: q25, push: T}
+      - {src: q25, dst: q2, push: a}
+      - {src: q2, dst: qf, pop: $}
+
+ex3:
+  start_state: q0
+  accepted_states: [qf]
+  edges:
+    - {src: q0, dst: q1, push: $}
+    - {src: q1, dst: q1, char: a, push: a}
+    - {src: q1, dst: q5, push: a}
+    - {src: q5, dst: q2, pop: a}
+    - {src: q2, dst: q2, char: b, pop: a}
+    - {src: q3, dst: q3, char: b, push: b}
+    - {src: q2, dst: q6, push: b}
+    - {src: q6, dst: q3, pop: b}
+    - {src: q3, dst: q7, push: b}
+    - {src: q7, dst: q4, pop: b}
+    - {src: q4, dst: q4, char: c, pop: b}
+    - {src: q4, dst: qf, pop: $}
+
+ex4:
+  start_state: q0
+  accepted_states: [qf]
+  edges:
+    - {src: q0, dst: q1, push: $}
+    - {src: q1, dst: q1, char: a, push: a}
+    - {src: q1, dst: q1, char: b, push: b}
+    - {src: q1, dst: q4, push: c}
+    - {src: q4, dst: q2, pop: c}
+    - {src: q2, dst: q2, char: c, pop: a}
+    - {src: q2, dst: q3, char: c, pop: b}
+    - {src: q3, dst: q5, char: c, push: c}
+    - {src: q5, dst: q2, pop: c}
+    - {src: q2, dst: qf, pop: $}

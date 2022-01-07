@@ -1,0 +1,172 @@
+ex1:
+  accepted_states:
+  - '3'
+  edges:
+  - char: a
+    dst: '1'
+    src: '0'
+  - char: b
+    dst: '0'
+    src: '0'
+  - char: a
+    dst: '1'
+    src: '1'
+  - char: b
+    dst: '2'
+    src: '1'
+  - char: a
+    dst: '3'
+    src: '2'
+  - char: b
+    dst: '0'
+    src: '2'
+  - char: a
+    dst: '1'
+    src: '3'
+  - char: b
+    dst: '2'
+    src: '3'
+  start_state: '0'
+ex2:
+  accepted_states:
+  - '1'
+  edges:
+  - char: a
+    dst: '1'
+    src: '0'
+  - char: b
+    dst: '2'
+    src: '0'
+  - char: a
+    dst: '1'
+    src: '1'
+  - char: b
+    dst: '1'
+    src: '1'
+  - char: a
+    dst: '1'
+    src: '2'
+  - char: b
+    dst: '1'
+    src: '2'
+  start_state: '0'
+ex3:
+  accepted_states:
+  - '0'
+  edges:
+  - char: a
+    dst: '1'
+    src: '0'
+  - char: b
+    dst: '1'
+    src: '0'
+  - char: a
+    dst: '0'
+    src: '1'
+  - char: b
+    dst: '0'
+    src: '1'
+  start_state: '0'
+ex4:
+  accepted_states:
+  - '0'
+  - '1'
+  - '2'
+  edges:
+  - char: a
+    dst: '0'
+    src: '0'
+  - char: b
+    dst: '1'
+    src: '0'
+  - char: a
+    dst: '2'
+    src: '1'
+  - char: b
+    dst: '1'
+    src: '1'
+  - char: a
+    dst: '0'
+    src: '2'
+  - char: b
+    dst: '3'
+    src: '2'
+  - char: a
+    dst: '3'
+    src: '3'
+  - char: b
+    dst: '3'
+    src: '3'
+  start_state: '0'
+ex5:
+  accepted_states:
+  - '5'
+  edges:
+  - char: a
+    dst: '1'
+    src: '0'
+  - char: b
+    dst: '1'
+    src: '0'
+  - char: a
+    dst: '2'
+    src: '1'
+  - char: a
+    dst: '2'
+    src: '2'
+  - char: null
+    dst: '2'
+    src: '2'
+  - char: b
+    dst: '3'
+    src: '2'
+  - char: b
+    dst: '3'
+    src: '3'
+  - char: a
+    dst: '2'
+    src: '3'
+  - char: b
+    dst: '4'
+    src: '2'
+  - char: a
+    dst: '5'
+    src: '4'
+  - char: a
+    dst: '5'
+    src: '5'
+  - char: b
+    dst: '5'
+    src: '5'
+  start_state: '0'
+ex6:
+  accepted_states:
+  - '0'
+  edges:
+  - char: b
+    dst: '1'
+    src: '0'
+  - char: b
+    dst: '2'
+    src: '1'
+  - char: null
+    dst: '0'
+    src: '2'
+  start_state: '0'
+ex7:
+  accepted_states:
+  - '0'
+  edges: 
+  - char: null
+    dst: '0'
+    src: '0'
+  - char: a
+    dst: '1'
+    src: '0'
+  - char: a
+    dst: '1'
+    src: '1'
+  - char: null
+    dst: '2'
+    src: '1'
+  start_state: '0'
